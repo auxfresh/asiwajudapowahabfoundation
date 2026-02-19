@@ -1,18 +1,10 @@
 (function ($) {
-
-    "use strict";
-
-
-
+ "use strict";
     // Spinner
-
-    var spinner = function () {
-
-        setTimeout(function () {
-
-            if ($('#spinner').length > 0) {
-
-                $('#spinner').removeClass('show');
+var spinner = function () {
+setTimeout(function () {
+  if ($('#spinner').length > 0) {
+   $('#spinner').removeClass('show');
 
             }
 
@@ -27,14 +19,8 @@
     
 
     // Initiate the wowjs
-
-    new WOW().init();
-
-
-
-
-
-    // Sticky Navbar
+ new WOW().init();
+// Sticky Navbar
 
     $(window).scroll(function () {
 
@@ -107,26 +93,12 @@
         }
 
     });
-
-
-
-
-
-    // Facts counter
-
-    $('[data-toggle="counter-up"]').counterUp({
-
-        delay: 10,
-
-        time: 2000
-
-    });
-
-
-
-
-
-    // Modal Video
+ // Facts counter
+  $('[data-toggle="counter-up"]').counterUp({
+delay: 10,
+      time: 2000
+  });
+ // Modal Video
 
     $(document).ready(function () {
 
@@ -357,14 +329,6 @@
                 items:2
 
             }
-
         }
-
     });
-
-    
-
 })(jQuery);
-
-
-
