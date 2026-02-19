@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADWF Blog Admin</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<h2 class="admin-title">Blog Admin Panel</h2>
+
+<div class="admin-box">
+  <input id="title" placeholder="Post title">
+  <input id="tag" placeholder="Tag text (e.g Youth Empowerment)">
+  <input type="color" id="tagColor" value="#e63946">
+  <textarea id="desc" placeholder="Long description"></textarea>
+
+  <!-- ✅ EDITABLE DATE & TIME -->
+  <input type="datetime-local" id="postDate">
+
+  <input id="media" placeholder="Paste image or video URLs (comma separated)">
+  <div id="preview" class="image-preview"></div>
+
+  <button onclick="publishPost()">Publish Post</button>
+</div>
+
+<hr>
+<h3>Existing Posts</h3>
+<div id="adminPosts"></div>
+
+<script src="js/firebase.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
+
+
+
