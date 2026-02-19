@@ -1,0 +1,61 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>ASIWAJU DAPO WAHAB FOUNDATION BLOG</title>    <link rel="stylesheet" href="css/style.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+  <!-- Firebase -->    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>  </head>  
+<body>  
+<div class="title-container">
+  <h1 class="blog-title">
+    <span id="typewriter"></span>
+  </h1>
+</div>
+
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search posts...">
+  <i class="fa-solid fa-magnifying-glass search-icon"></i>
+  <div id="autocompleteList" class="autocomplete-list"></div>
+</div>
+<!-- Year filter -->
+<div class="year-filter-container">
+  <div class="year-gradient-border">
+    <div class="year-select-wrapper">
+      <select id="yearFilter">
+        <option value="all">All years</option>
+      </select>
+      <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Featured Carousel will be injected here automatically -->
+<div id="posts" class="feed"></div>  <script src="js/firebase.js"></script>  <script src="js/blog.js"></script> 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const text = "ASIWAJU DAPO WAHAB FOUNDATION BLOG";
+  const el = document.getElementById("typewriter");
+
+  let i = 0;
+  el.textContent = "";
+
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 80); // typing speed
+    }
+  }
+
+  type();
+});
+</script>
+<button id="backToTop" title="Back to top">↑</button>
+</body>  
+</html>
