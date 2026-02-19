@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery With LightBox</title>
+    <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ===== FIXED NAVBAR ===== */
+        .main-nav {
+            width: 100%;
+            background: orange;
+            padding: 18px 0;
+            font-family: Poppins, sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 80px; /* prevent navbar overlap */
+            font-family: Arial, sans-serif;
+        }
+
+        .nav-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        #nav-toggle {
+            display: none;
+        }
+
+        .toggle-btn {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: orange;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                padding: 20px 0;
+                display: none;
+            }
+
+            #nav-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            .toggle-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ADDED HERE ===== -->
+    <nav class="main-nav">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">MENU</a>
+
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="toggle-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="achievement.html">Achievement</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="blog.html">Our Blog</a></li>
+            </ul>
+
+        </div>
+    </nav>
+<h1 class="gallery-title">ASIWAJU DAPO WAHAB FOUNDATION EVENTS PHOTOS</h1>
+    <!-- ===== IMAGE GALLERY ===== -->
+    <div class="gallery">
+      <img src="img-1.jpg" alt="Image-1" data-index="0" />
+      <img src="img-2.jpg" alt="Image-2" data-index="1" />
+      <img src="img-7.jpg" alt="Image-3" data-index="2" />
+      <img src="img-4.jpg" alt="Image-4" data-index="3" />
+      <img src="img-5.jpg" alt="Image-5" data-index="4" />
+      <img src="img-6.jpg" alt="Image-6" data-index="5" />
+      <img src="img-3.jpg" alt="Image-7" data-index="6" />
+      <img src="img-8.jpg" alt="Image-8" data-index="7" />
+      <img src="img-9.jpg" alt="Image-9" data-index="8" />
+      <img src="img-10.jpg" alt="Image-10" data-index="9" />
+      <img src="img-11.jpg" alt="Image-11" data-index="10" />
+      <img src="img-12.jpg" alt="Image-12" data-index="11" />
+      <img src="img-13.jpg" alt="Image-13" data-index="12" />
+      <img src="img-14.jpg" alt="Image-14" data-index="13" />
+      <img src="img-15.jpg" alt="Image-15" data-index="14" />
+      <img src="img-16.jpg" alt="Image-16" data-index="15" />
+      <img src="img-17.jpg" alt="Image-17" data-index="16" />
+      <img src="img-20.jpg" alt="Image-20" data-index="17" />
+      <img src="img-18.jpg" alt="Image-18" data-index="18" />
+      <img src="img-21.jpg" alt="Image-21" data-index="19" />
+      <img src="img-19.jpg" alt="Image-19" data-index="20" />
+      <img src="img-23.jpg" alt="Image-23" data-index="21" />
+      <img src="img-22.jpg" alt="Image-22" data-index="22" />
+      <img src="img-25.jpg" alt="Image-25" data-index="23" />
+      <img src="img-26.jpg" alt="Image-26" data-index="24" />
+      <img src="img-27.jpg" alt="Image-27" data-index="25" />
+      <img src="img-28.jpg" alt="Image-28" data-index="26" />
+      <img src="img-29.jpg" alt="Image-29" data-index="27" />
+      <img src="img-30.jpg" alt="Image-30" data-index="28" />
+      <img src="img-31.jpg" alt="Image-31" data-index="29" />
+      <img src="img-32.jpg" alt="Image-32" data-index="30" />
+      <img src="img-33.jpg" alt="Image-33" data-index="31" />
+      <img src="img-34.jpg" alt="Image-34" data-index="32" />
+      <img src="img-35.jpg" alt="Image-35" data-index="33" />
+      <img src="img-36.jpg" alt="Image-36" data-index="34" />
+      <img src="img-44.jpg" alt="Image-44" data-index="35" />
+      <img src="img-38.jpg" alt="Image-38" data-index="36" />
+      <img src="img-39.jpg" alt="Image-39" data-index="37" />
+      <img src="img-40.jpg" alt="Image-40" data-index="38" />
+      <img src="img-41.jpg" alt="Image-41" data-index="39" />
+      <img src="img-43.jpg" alt="Image-43" data-index="40" />
+      <img src="img-37.jpg" alt="Image-37" data-index="41" />
+      <img src="img-44.jpg" alt="Image-44-duplicate" data-index="42" />
+      <img src="img-45.jpg" alt="Image-45" data-index="43" />
+      <img src="img-46.jpg" alt="Image-46" data-index="44" />
+      <img src="img-47.jpg" alt="Image-47" data-index="45" />
+      <img src="img-48.jpg" alt="Image-48" data-index="46" />
+      <img src="img-51.jpg" alt="Image-51" data-index="47" />
+      <img src="img-50.jpg" alt="Image-50" data-index="48" />
+      <img src="img-49.jpg" alt="Image-49" data-index="49" />
+      <img src="img-52.jpg" alt="Image-52" data-index="50" />
+<img src="img-53.jpg" alt="Image-53" data-index="51" />
+<img src="img-54.jpg" alt="Image-54" data-index="52" />
+<img src="img-55.jpg" alt="Image-55" data-index="53" />
+<img src="img-56.jpg" alt="Image-56" data-index="54" />
+<img src="img-57.jpg" alt="Image-57" data-index="55" />
+<img src="img-58.jpg" alt="Image-58" data-index="56" />
+<img src="img-59.jpg" alt="Image-59" data-index="57" />
+<img src="img-60.jpg" alt="Image-60" data-index="58" />
+<img src="img-61.jpg" alt="Image-61" data-index="59" />
+<img src="img-62.jpg" alt="Image-62" data-index="60" />
+<img src="img-63.jpg" alt="Image-63" data-index="61" />
+<img src="img-64.jpg" alt="Image-64" data-index="62" />
+<img src="img-65.jpg" alt="Image-65" data-index="63" />
+<img src="img-66.jpg" alt="Image-66" data-index="64" />
+<img src="img-67.jpg" alt="Image-67" data-index="65" />
+<img src="img-68.jpg" alt="Image-68" data-index="66" />
+<img src="img-69.jpg" alt="Image-69" data-index="67" />
+<img src="img-70.jpg" alt="Image-70" data-index="68" />
+<img src="img-71.jpg" alt="Image-71" data-index="69" />
+<img src="img-72.jpg" alt="Image-72" data-index="70" />
+<img src="img-73.jpg" alt="Image-73" data-index="71" />
+<img src="img-74.jpg" alt="Image-74" data-index="72" />
+<img src="img-75.jpg" alt="Image-75" data-index="73" />
+<img src="img-76.jpg" alt="Image-76" data-index="74" />
+<img src="img-77.jpg" alt="Image-77" data-index="75" />
+<img src="img-78.jpg" alt="Image-78" data-index="76" />
+<img src="img-79.jpg" alt="Image-79" data-index="77" />
+<img src="img-80.jpg" alt="Image-80" data-index="78" />
+<img src="img-81.jpg" alt="Image-81" data-index="79" />
+<img src="img-82.jpg" alt="Image-82" data-index="80" />
+<img src="img-83.jpg" alt="Image-83" data-index="81" />
+<img src="img-84.jpg" alt="Image-84" data-index="82" />
+<img src="img-85.jpg" alt="Image-85" data-index="83" />
+<img src="img-86.jpg" alt="Image-86" data-index="84" />
+<img src="img-87.jpg" alt="Image-87" data-index="85" />
+<img src="img-88.jpg" alt="Image-88" data-index="86" />
+<img src="img-89.jpg" alt="Image-89" data-index="87" />
+<img src="img-90.jpg" alt="Image-90" data-index="88" />
+<img src="img-91.jpg" alt="Image-91" data-index="89" />
+<img src="img-92.jpg" alt="Image-92" data-index="90" />
+<img src="img-93.jpg" alt="Image-93" data-index="91" />
+<img src="img-94.jpg" alt="Image-94" data-index="92" />
+<img src="img-95.jpg" alt="Image-95" data-index="93" />
+<img src="img-96.jpg" alt="Image-96" data-index="94" />
+<img src="img-97.jpg" alt="Image-97" data-index="95" />
+<img src="img-98.jpg" alt="Image-98" data-index="96" />
+<img src="img-99.jpg" alt="Image-99" data-index="97" />
+<img src="img-100.jpg" alt="Image-100" data-index="98" />
+<img src="img-101.jpg" alt="Image-101" data-index="99" />
+<img src="img-102.jpg" alt="Image-102" data-index="100" />
+<img src="img-103.jpg" alt="Image-103" data-index="101" />
+<img src="img-104.jpg" alt="Image-104" data-index="102" />
+<img src="img-105.jpg" alt="Image-105" data-index="103" />
+<img src="img-106.jpg" alt="Image-106" data-index="104" />
+<img src="img-107.jpg" alt="Image-107" data-index="105" />
+<img src="img-108.jpg" alt="Image-108" data-index="106" />
+<img src="img-109.jpg" alt="Image-109" data-index="107" />
+<img src="img-110.jpg" alt="Image-110" data-index="108" />
+<img src="img-111.jpg" alt="Image-111" data-index="109" />
+<img src="img-112.jpg" alt="Image-112" data-index="110" />
+<img src="img-113.jpg" alt="Image-113" data-index="111" />
+<img src="img-114.jpg" alt="Image-114" data-index="112" />
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="close" aria-label="Close">&times;</button>
+      <button class="prev" aria-label="Previous image">&#8249;</button>
+      <img src="" alt="lightbox image" />
+      <button class="next" aria-label="Next image">&#8250;</button>
+    </div>
+<button id="backToTop" title="Back to top">&#8679;</button>
+    <script src="script.js"></script>
+    
+<script>
+  //Get the button
+  const backToTopButton = document.getElementById("backToTop");
+
+  // Show button when user scrolls down 300px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top when clicked
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
