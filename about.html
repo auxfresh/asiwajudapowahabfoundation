@@ -834,6 +834,101 @@ We remain firmly committed to collaborating with stakeholders locally and intern
   transform: scale(1.1);
 }
 </style>
+
+</div>
+
+ <div class="mycard-container">
+  <div class="mycard">
+    <img src="letters/bigletter.jpg" alt="My Gallery Image" class="mycard-img"/>
+    <div class="mycard-content">
+      <h2 class="mycard-title">Letters From our Partner</h2>
+      <p class="mycard-text">Check out the letters from our partner</p>
+      <a href="media.html" class="mycard-btn">Check Out</a>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Container */
+.mycard-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Card */
+.mycard {
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #fff;
+  perspective: 1000px;
+  animation: mycard-float 6s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes mycard-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Image */
+.mycard-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Card Content */
+.mycard-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title and Text */
+.mycard-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.mycard-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Check Out Button */
+.mycard-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, red, orange);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button Hover Effect */
+.mycard-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Card Hover Effect */
+.mycard:hover {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.mycard:hover .mycard-img {
+  transform: scale(1.1);
+}
+</style>
 <div class="container-fluid py-5">
 
 <div class="container">
@@ -1186,5 +1281,6 @@ Director: Girl - Child Education</p>
 </body>
 
 </html>
+
 
 
